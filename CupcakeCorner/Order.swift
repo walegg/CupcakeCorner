@@ -25,6 +25,8 @@ class Order: ObservableObject, Codable {
     var hasValidAddress: Bool {
         if name.isEmpty || streetAddress.isEmpty || city.isEmpty || zip.isEmpty {
             return false
+        } else if name == " " || streetAddress == " " || city == " " || zip == " " {
+            return false
         }
         return true
     }
